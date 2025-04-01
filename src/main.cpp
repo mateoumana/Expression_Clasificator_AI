@@ -151,7 +151,7 @@ void encoding_hashing_trick(){
 }
 
 void onehot(){
-  memset(ent_encod_onehot, 0, sizeof(ent_encod_onehot));//reiniciar la matriz
+  memset(ent_encod_onehot, 0, MAX_ENT*VOCAB_SIZE*sizeof(ent_encod_onehot));//reiniciar la matriz
   for(int i = 0; i < MAX_ENT; i++){
     ent_encod_onehot[i][ent_encoded[i]] = 1;
   }
